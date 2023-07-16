@@ -11,7 +11,7 @@ build-dev: ## build image
 	docker build -t mini-demand-side-platform/ml-serving:dev -f ./docker/Dockerfile .
 
 run-dev: ## run image locally
-	docker run -it --rm --network databases_default -p 8002:8002 \
+	docker run -it --rm --network mini-demand-side-platform -p 8002:8002 \
 	-e olap_host='postgresql' \
 	-e cache_host='redis' \
 	mini-demand-side-platform/ml-serving:dev

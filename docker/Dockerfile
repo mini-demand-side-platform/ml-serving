@@ -39,4 +39,4 @@ COPY poetry.lock pyproject.toml ./
 COPY ml_serving ./ml_serving
 
 RUN poetry config virtualenvs.create false && poetry install --no-root --no-interaction --no-ansi
-CMD ["uvicorn", "ml_servin.main:app", "--host", "0.0.0.0", "--port", "8002"]
+CMD ["uvicorn", "ml_serving.main:app", "--host", "0.0.0.0", "--port", "8002"]
