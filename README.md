@@ -1,13 +1,13 @@
 ![Build](https://github.com/mini-demand-side-platform/ml-serving/workflows/build/badge.svg)
 
 # ML Serving
-This is the machine learning model serving moudle in the [mini-demand-side-platform](https://github.com/mini-demand-side-platform/mini-demand-side-platform).
+This is the machine learning model serving module of the [mini-demand-side-platform](https://github.com/mini-demand-side-platform/mini-demand-side-platform).
 
 The ML Serving server continually polls the object storage for the most up-to-date model to serve.
 
 ## Usages
-Make click-through-rate prediction. The API been design to make multiple predictions at one time. 
-The following example is making two prediction at once. Each row of the input is all the all the features for the model making one prediction. 
+Make click-through-rate prediction. The API has been designed to make multiple predictions at one time. 
+The following example is making two predictions at once. Each row of the inputs is a complete feature for the model to make one prediction. 
 ```bash
 curl -X 'POST' \
   'http://localhost:8001/model:predict' \
@@ -28,14 +28,14 @@ Expected output:
     0.42452723364105566
 ]
 ```
-## Requirments
+## Requirements
 - Docker 
 - Docker-compose 
 - make
 
 ## Setup
 If you want to run this serving module on docker, please follow the instruction below.
-#### 1. Active databases
+#### 1. Activate databases 
 ```bash
 git clone git@github.com:mini-demand-side-platform/databases.git
 cd databases 
